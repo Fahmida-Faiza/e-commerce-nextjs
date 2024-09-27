@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Homepage = () => {
@@ -39,22 +40,22 @@ const Homepage = () => {
 
             {/*  */}
 
-            <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 bg-white">
+            <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 bg-white mt-10">
                 <div>
                     <div className="card card-compact bg-base-100 w-full lg:w-80 shadow-xl">
                         <figure>
                             <Image
-                                src="/assets/banner-2.jpg" width="1000" height="1200" className='w-full' alt="Banner 2" />
+                                src="/assets/men_1.jpg" width="1000" height="1200" className='w-full' alt="Banner 2" />
                         </figure>
-                       
+
                     </div>
                 </div>
-                
+
                 <div>
                     <div className="card card-compact bg-base-100 w-full lg:w-80 shadow-xl">
                         <figure>
                             <Image
-                                src="/assets/banner-2.jpg" width="1200" height="1200" className='w-full' alt="Banner 2" />
+                                src="/assets/women_1.jpg" width="1200" height="1200" className='w-full' alt="Banner 2" />
                         </figure>
 
                     </div>
@@ -63,7 +64,7 @@ const Homepage = () => {
                     <div className="card card-compact bg-base-100 w-full lg:w-80 shadow-xl">
                         <figure>
                             <Image
-                                src="/assets/banner-2.jpg" width="1200" height="1200" className='w-full' alt="Banner 2" />
+                                src="/assets/kids_1.jpg" width="1200" height="1200" className='w-full' alt="Banner 2" />
                         </figure>
 
                     </div>
@@ -72,14 +73,174 @@ const Homepage = () => {
                     <div className="card card-compact bg-base-100 w-full lg:w-80 shadow-xl">
                         <figure>
                             <Image
-                                src="/assets/banner-2.jpg" width="1200" height="1200" className='w-full' alt="Banner 2" />
+                                src="/assets/accessories_1.jpg" width="1200" height="1200" className='w-full' alt="Banner 2" />
                         </figure>
 
                     </div>
                 </div>
             </div>
+
+            {/*  */}
+            <div
+                className="hero   mt-10">
+
+                <Image
+                    src="/assets/web-strip-banner.jpg" width="1200" height="1200" className='w-full' alt="Banner 2" />
+
+
+            </div>
+
+
+            {/*  2nd navbar*/}
+
+            <div>
+                <div className="navbar bg-base-100">
+                    <div className="navbar-start">
+                        <div className="dropdown">
+                            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-5 w-5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul
+                                tabIndex={0}
+                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+
+
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div className="navbar-center hidden lg:flex">
+                        <ul className="menu menu-horizontal px-1">
+
+                            {/* ............................................... */}
+
+                            {
+                                navItems.map((item) => (
+                                    <li key={item.path}><Link href={item.path} >{item.title}</Link></li>
+                                ))
+                            }
+
+                            <li><div className="dropdown dropdown-hover">
+                                <div tabIndex={0}>Hover</div>
+                                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow mt-24">
+                                    <li>Hello</li>
+                                </ul>
+                            </div></li>
+                            {/* ............................................... */}
+                        </ul>
+                    </div>
+                    <div className="navbar-end"></div>
+                </div>
+            </div>
+
+
+
+
+            {/*  */}
+
+            <div className='mx-auto  w-[90%] grid grid-cols-1 lg:grid-cols-4 gap-4 text-black'>
+                <div className="card  shadow-xl  ">
+                    <figure>
+                        <Image
+                            src="/assets/shoes-1.jpg" width="1200" height="1200" className='w-full' alt="Banner 2" />
+                    </figure>
+                    <div className="card-body text-center">
+                        <h2 className="card-title justify-center">NORTH STAR</h2>
+                        <p>North Star ROYAL Casual Lace-Up Sneaker for Men</p>
+                        <div className="card-actions justify-end">
+                            <button className="btn  w-full btn-error">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="card   shadow-xl ">
+                    <figure>
+                        <Image
+                            src="/assets/shoes-1.jpg" width="1200" height="1200" className='w-full' alt="Banner 2" />
+                    </figure>
+                    <div className="card-body text-center">
+                        <h2 className="card-title justify-center">NORTH STAR</h2>
+                        <p>North Star ROYAL Casual Lace-Up Sneaker for Men</p>
+                        <div className="card-actions justify-end">
+                            <button className="btn  w-full btn-error">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="card shadow-xl">
+                    <figure>
+                        <Image
+                            src="/assets/shoes-1.jpg" width="1200" height="1200" className='w-full' alt="Banner 2" />
+                    </figure>
+                    <div className="card-body text-center">
+                        <h2 className="card-title justify-center">NORTH STAR</h2>
+                        <p>North Star ROYAL Casual Lace-Up Sneaker for Men</p>
+                        <div className="card-actions justify-end">
+                            <button className="btn  w-full btn-error">Shop Now</button>
+                        </div>
+                    </div>
+                </div>     <div className="card shadow-xl">
+                    <figure>
+                        <Image
+                            src="/assets/shoes-1.jpg" width="1200" height="1200" className='w-full' alt="Banner 2" />
+                    </figure>
+                    <div className="card-body text-center">
+                        <h2 className="card-title justify-center">NORTH STAR</h2>
+                        <p>North Star ROYAL Casual Lace-Up Sneaker for Men</p>
+                        <div className="card-actions justify-end">
+                            <button className="btn  w-full btn-error">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            {/* //////////////////// */}
+
         </div>
     );
 };
+
+
+
+
+
+const navItems = [
+
+    // {
+    //     title: "Home",
+    //     path: "/"
+    // },
+    {
+        title: "Casuals",
+        path: "/about"
+    },
+    {
+        title: "Ladies Flat",
+        path: "/services"
+    },
+    {
+        title: "Snekers",
+        path: "/my-bookings"
+    },
+    {
+        title: "Sandels",
+        path: "/blog"
+    },
+    {
+        title: "Acceraries",
+        path: "/contacts"
+    },
+]
 
 export default Homepage;
