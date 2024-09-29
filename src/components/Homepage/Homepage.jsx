@@ -172,7 +172,7 @@ const Homepage = () => {
                         <h2 className="card-title justify-center">NORTH STAR</h2>
                         <p>North Star ROYAL Casual Lace-Up Sneaker for Men</p>
                         <div className=''>
-                            <span className=''>Tk <del>3299</del> </span>
+                            <span className='text-gray-400'>Tk <del>3299</del> </span>
                             <span className='text-red-500'>Tk 2960</span>
                         </div>
 
@@ -204,7 +204,7 @@ const Homepage = () => {
                         <h2 className="card-title justify-center">NORTH STAR</h2>
                         <p>North Star ROYAL Casual Lace-Up Sneaker for Men</p>
                         <div className=''>
-                            <span className=''>Tk <del>3299</del> </span>
+                            <span className='text-gray-400'>Tk <del>3299</del> </span>
                             <span className='text-red-500'>Tk 2960</span>
                         </div>
 
@@ -239,7 +239,7 @@ const Homepage = () => {
                         
                        
                         <div className=''>
-                            <span className=''>Tk <del>3299</del> </span>
+                            <span className='text-gray-400'>Tk <del>3299</del> </span>
                             <span className='text-red-500'>Tk 2960</span>
                         </div> 
                        
@@ -268,7 +268,7 @@ const Homepage = () => {
                         <h2 className="card-title justify-center">NORTH STAR</h2>
                         <p>North Star ROYAL Casual Lace-Up Sneaker for Men</p>
                         <div className=''>
-                            <span className=''>Tk <del>3299</del> </span>
+                            <span className='text-gray-400'>Tk <del>3299</del> </span>
                             <span className='text-red-500'>Tk 2960</span>
                         </div>
 
@@ -283,6 +283,38 @@ const Homepage = () => {
 
 
             {/* //////////////////// */}
+            {/* card2nd page */}
+
+            <div className='mx-auto text-gray-500 w-[90%] grid grid-cols-2 gap-16 '>
+                <div className="card card-compact  group relative  overflow-hidden  shadow-xl">
+                    <figure>
+                        <Image
+                            src="/assets/mens-casual.png" width="1200" height="1200" className='w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-110' alt="Banner 2" />
+                    </figure>
+                    <div className="card-body items-center text-center">
+                        <h2 className="card-title">Shoes!</h2>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div className="card-actions justify-end">
+                            <button className="btn text-white  btn-info">SHOP NOW</button>
+                        </div>
+                    </div>
+                </div>
+
+                {/* 2nd cols */}
+                <div className="card group relative  overflow-hidden  shadow-xl">
+                    <figure>
+                        <Image
+                            src="/assets/mens-casual.png" width="1200" height="1200" className='  w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-110' alt="Banner 2" />
+                    </figure>
+                    <div className="card-body items-center text-center">
+                        <h2 className="card-title ">Mens Casuals</h2>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div className="card-actions justify-center">
+                            <button className="btn text-white  btn-info">SHOP NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     );
