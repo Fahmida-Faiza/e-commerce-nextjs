@@ -89,7 +89,7 @@ const navItems = [
     },
     {
         title: "Blog",
-        path: "/blog"
+        path: "/blogs"
     },
     {
         title: "Contacts",
