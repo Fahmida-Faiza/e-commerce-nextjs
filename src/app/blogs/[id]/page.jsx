@@ -1,7 +1,34 @@
 import React from 'react'
+import getPost from '../../../../lib/getPost';
+import Image from 'next/image';
 
-export default function page() {
+export default async function PostPage({params}) {
+  const {id} = params;
+  const post = await getPost(id)
   return (
-    <div>page</div>
+    <div className='mx-auto  '>
+
+
+
+      {/* <h2>{post.title}</h2>
+      <p>{post.body}</p> */}
+
+
+
+<div className="card text-black  md:w-80 lg:w-96 shadow-xl">
+  <figure className="px-10 pt-10">
+    <Image
+      src="/assets/bags.png"
+      alt="Shoes"
+      width={400} height={400}
+      className="rounded-xl" />
+  </figure>
+  <div className="card-body items-center text-center">
+    <h2 className="card-title">{post.title}</h2>
+    <p>{post.body}</p>
+  
+  </div>
+</div>
+    </div>
   )
 }
