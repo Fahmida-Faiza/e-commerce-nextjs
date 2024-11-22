@@ -12,13 +12,13 @@ export default async function Blogs() {
 
       <h1 className='text-center font-bold text-3xl text-black my-10'>All Blogs</h1>
 
-      <div className='grid grid-cols-3 gap-5 mx-auto w-[80%]'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto w-[80%]'>
 
 
         {
           blogs.map((blog) => (
             <div key={blog.id}>
-              <div className="card text-black md:w-80 lg:w-96 shadow-xl">
+              <div className="card text-black md:w-80 lg:w-96 shadow-xl h-[300px]">
                 <div className="card-body">
                   <Link href={`/blogs/${blog.id}`}>
                     <h2 className="card-title"> {blog.title}</h2>
