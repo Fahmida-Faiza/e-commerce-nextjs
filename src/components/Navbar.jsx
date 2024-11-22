@@ -79,14 +79,14 @@ const navItems = [
         title: "About",
         path: "/about"
     },
-    {
-        title: "Services",
-        path: "/services"
-    },
-    {
-        title: "MyBookings",
-        path: "/my-bookings"
-    },
+    // {
+    //     title: "Services",
+    //     path: "/services"
+    // },
+    // {
+    //     title: "MyBookings",
+    //     path: "/my-bookings"
+    // },
     {
         title: "Blog",
         path: "/blogs"

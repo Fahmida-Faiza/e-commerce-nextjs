@@ -10,7 +10,7 @@ export default async function Blogs() {
   return (
     <div className=''>
 
-      <h1>all Blogs</h1>
+      <h1 className='text-center font-bold text-3xl text-black my-10'>All Blogs</h1>
 
       <div className='grid grid-cols-3 gap-5 mx-auto w-[80%]'>
 
@@ -18,12 +18,12 @@ export default async function Blogs() {
         {
           blogs.map((blog) => (
             <div key={blog.id}>
-              <div className="card bg-base-100 md:w-80 lg:w-96 shadow-xl">
+              <div className="card text-black md:w-80 lg:w-96 shadow-xl">
                 <div className="card-body">
                   <Link href={`/blogs/${blog.id}`}>
                     <h2 className="card-title"> {blog.title}</h2>
                     <div className="card-actions justify-center my-10">
-                      <button className="btn btn-primary">Show Details</button>
+                      <button className="btn btn-primary text-white">Show Details</button>
                     </div>
                   </Link>
                 </div>

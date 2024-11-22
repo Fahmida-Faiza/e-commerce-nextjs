@@ -133,12 +133,6 @@ const Homepage = () => {
                                 ))
                             }
 
-                            <li><div className="dropdown dropdown-hover">
-                                <div tabIndex={0}>Hover</div>
-                                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow mt-24">
-                                    <li>Hello</li>
-                                </ul>
-                            </div></li>
                             {/* ............................................... */}
                         </ul>
                     </div>
@@ -353,7 +347,8 @@ const Homepage = () => {
                             <h2 className="card-title">Ladies casual</h2>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus fugiat sint vitae iure temporibus eum! Excepturi explicabo consequuntur quibusdam nesciunt?</p>
                             <div className="card-actions justify-end">
-                                <button className="btn text-white btn-error">Buy Now</button>
+                            <Link href={`/booking`}><button className="btn text-white btn-error">Buy Now</button> </Link>
+                              
                             </div>
                         </div>
                     </div>
@@ -370,7 +365,7 @@ const Homepage = () => {
                             <h2 className="card-title">Mens Casuals</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus error explicabo soluta consequatur reprehenderit fuga nesciunt earum quam ut. Iste!</p>
                             <div className="card-actions justify-end">
-                                <button className="btn text-white btn-error">Buy Now</button>
+                            <Link href={`/booking`}><button className="btn text-white btn-error">Buy Now</button> </Link>
                             </div>
                         </div>
                     </div>
@@ -387,7 +382,7 @@ const Homepage = () => {
                             <h2 className="card-title">Ladies Bags</h2>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum unde tempore placeat sapiente dolorem earum, dolorum minima facilis nisi consectetur?</p>
                             <div className="card-actions justify-end">
-                                <button className="btn text-white btn-error">Buy Now</button>
+                            <Link href={`/booking`}><button className="btn text-white btn-error">Buy Now</button> </Link>
                             </div>
                         </div>
                     </div>
