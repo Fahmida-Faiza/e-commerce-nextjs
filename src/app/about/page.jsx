@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 function About() {
@@ -33,7 +34,7 @@ function About() {
                                 <h2 className="card-title">Aubrey Bravo</h2>
                                 <p>Student</p>
                                 <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">Contact Now</button>
+                                <Link href={`/contacts`}><button className="btn btn-primary">Contact Now</button> </Link>
                                 </div>
                             </div>
                         </div>
@@ -51,7 +52,7 @@ function About() {
                                 <p>Designer
                                 </p>
                                 <div className="card-actions justify-end">
-                                    <button className="btn btn-error text-white">Contact Now</button>
+                                <Link href={`/contacts`}><button className="btn btn-error text-white">Contact Now</button> </Link>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +70,8 @@ function About() {
                                 <p>Architect
                                 </p>
                                 <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">Contact Now</button>
+                                   
+                                    <Link href={`/contacts`}><button className="btn btn-primary">Contact Now</button> </Link>
                                 </div>
                             </div>
                         </div>

@@ -3,6 +3,8 @@ import React from 'react'
 export default function ContactPage() {
   return (
     <div>
+
+
       <div className="hero  min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left text-black">
