@@ -16,13 +16,10 @@ function ServiceCard({ service }) {
 
                             <figure>
                                 <Image
-                                    src="/assets/shoes-1.jpg" width="1200" height="1200" className="w-full h-full object-cover" alt="Banner 2" />
+                                    src={data.image} width="1200" height="1200" className="w-full h-full object-cover" alt="Banner 2" />
                             </figure>
 
-                            <figure>
-                                <Image
-                                    src="/assets/shoe_2.jpg" width="1200" height="1200" className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300" alt="Banner 2" />
-                            </figure>
+                          
 
 
                         </div>
