@@ -62,7 +62,10 @@ const Navbar = () => {
                         {/* ............................................... */}
                     </ul>
                 </div>
-                <div className="navbar-end"></div>
+                <div className="navbar-end">
+                    <div>
+                        <Link href ="/login"><button className='btn btn-accent'>Login</button></Link>                    </div>
+                </div>
             </div>
         </div>
     );
