@@ -26,7 +26,7 @@ function About() {
                     <div>
                         <div className="card card-compact text-black w-80 lg:w-96 md:w-80  shadow-xl border-x-8 bg-white">
                             <figure>
-                                <Image
+                                <Image alt=""
                                     src="/assets/mens.png" width="700" height="1200"
                                     className="" />
                             </figure>
@@ -43,7 +43,7 @@ function About() {
                     <div>
                         <div className="card card-compact bg-base-100 w-80  lg:w-96 md:w-80 shadow-xl border-x-8">
                             <figure>
-                                <Image
+                                <Image alt=""
                                     src="/assets/women.png" width="700" height="1200"
                                     className="" />
                             </figure>
@@ -61,7 +61,7 @@ function About() {
                     <div>
                         <div className="card card-compact text-black w-80 lg:w-96 md:w-80   shadow-xl border-x-8 bg-white">
                             <figure>
-                                <Image
+                                <Image alt=""
                                     src="/assets/mens.png" width="700" height="1200"
                                     className="" />
                             </figure>
@@ -99,7 +99,7 @@ function About() {
 
             <div className="hero bg-slate-100  text-black my-10">
                 <div className="hero-content flex-col lg:flex-row">
-                    <Image
+                    <Image alt=""
                         src="/assets/mens-casual.png" width="1200" height="1200"
 
                         className="max-w-sm rounded-lg shadow-2xl" />

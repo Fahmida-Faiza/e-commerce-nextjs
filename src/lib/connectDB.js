@@ -1,6 +1,7 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 require("dotenv").config();
 
+
 let db;
 
 export const connectDB = async () => {
@@ -16,11 +17,14 @@ export const connectDB = async () => {
         deprecationErrors: true,
       },
     });
-    db = client.db("e-commerce");
+    db = client.db("bata-ecommerce");
     return db;
     
   } catch (error) {
     console.log(error);
   }
 };
+
+
+
 

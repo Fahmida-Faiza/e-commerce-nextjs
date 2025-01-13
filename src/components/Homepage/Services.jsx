@@ -1,7 +1,8 @@
 
 import React from 'react'
-import { services } from '../../../lib/services'
+
 import ServiceCard from '../cards/ServiceCard'
+import { services } from '@/lib/services'
 export default function Services() {
   // console.log(services)
   return (

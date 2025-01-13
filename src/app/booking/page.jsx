@@ -7,12 +7,12 @@ function Booking() {
     <div className='max-w-[84rem]'>
       <div className="hero  min-h-screen bg-white">
         <div className="hero-content flex-col lg:flex-row gap-10 justify-between text-black">
-          <Image
+          <Image alt=""
             src="/assets/sneckers_men.png" width="700" height="1200"
             className="" />
 
           <div className='space-y-5'>
-            <h1 className="text-2xl font-bold text-black ">Hush Puppies Men's SEVENTY8 Sneaker</h1>
+            <h1 className="text-2xl font-bold text-black ">Hush Puppies Men&apos;s SEVENTY8 Sneaker</h1>
             <h2 className='leading-loose'>Brand: Hush Puppies<br></br>
               Product Code: 8061541<br></br>
               Availability: In stock
@@ -34,7 +34,7 @@ function Booking() {
             <div className='text-gray-500'>
 
 
-              Catch us courtside. The Seventy8 Collection with Bounce cushioning wins throwback athletic style. Discover the perfect footwear for the modern man - men's eco-friendly trainers! These stylish and...
+              Catch us courtside. The Seventy8 Collection with Bounce cushioning wins throwback athletic style. Discover the perfect footwear for the modern man - men&apos;s eco-friendly trainers! These stylish and...
             </div>
 
             <div className='space-x-5 my-10'>

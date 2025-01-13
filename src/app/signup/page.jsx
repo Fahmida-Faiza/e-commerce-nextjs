@@ -15,23 +15,24 @@ const SignUpPage = () => {
             email: event.target.email.value,
             password: event.target.password.value
         }
-        console.log(newUser);
+        console.log("signup", newUser);
         // api request korbo
-        const resp = await fetch("http://localhost:3000/signup/api" , {
+        const resp = await fetch("http://localhost:3000/signup/api", {
             method: "POST",
-            body :JSON.stringify(newUser),
-            headers : {
-                "content-type" :"application/json"
+            body: JSON.stringify(newUser),
+            headers: {
+                "content-type": "application/json"
             }
 
         })
         console.log(resp)
 
-// reset korey likha gula form er
-if(resp.status === 200){
-    event.target.reset()
-}
-        
+
+        // reset korey likha gula form er
+        if (resp.status === 200) {
+            event.target.reset()
+        }
+
     }
     // 
     return (
@@ -41,9 +42,9 @@ if(resp.status === 200){
                     <div>
                         <Image src="/assets/mens-casual.png" height="400" width="540" alt="login" />
                     </div>
+                    <h1 className='text-3xl text-red-400'>Signup page</h1>
                     <div className='border-2 p-12 '>
                         <form onSubmit={handleSignUp} action="">
-                            <h1 className='text-3xl text-red-400'>Signup page</h1>
                             <label htmlFor="name">Name</label><br></br>
                             <input type="text" name="name" placeholder="your name" className="mt-3 input input-bordered w-full max-w-xs" />
                             <br></br>
@@ -57,13 +58,13 @@ if(resp.status === 200){
                                 className="mt-3 input input-bordered w-full max-w-xs" />
                             <br />
 
-                            <button type="submit" className='mt-4 btn btn-primary'>SignIn</button>
+                            <button className='mt-4 btn btn-primary'>SignIn</button>
 
+                        </form>
                             <div className='text-center'>
                                 <h6>or Sign in with</h6>
-                                <SocialSignin/>
+                                <SocialSignin />
                             </div>
-                        </form>
 
                         <h3 className=''>Already have an account <Link className='text-red-400 text-xl' href={'/login'}>Login</Link></h3>
                     </div>

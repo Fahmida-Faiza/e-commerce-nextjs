@@ -1,6 +1,7 @@
 import React from 'react'
-import getAllBlogs from '../../../lib/getAllBlogs'
+
 import Link from 'next/link'
+import getAllBlogs from '@/lib/getAllBlogs'
 
 export default async function Blogs() {
   const blogs = await getAllBlogs()

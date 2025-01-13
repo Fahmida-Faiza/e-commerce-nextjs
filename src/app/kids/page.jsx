@@ -1,7 +1,9 @@
 import React from 'react';
-import { services } from '../../../lib/services';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { services } from '@/lib/services';
+
 
 const Page = () => {
   // Access the `women` array from the `services` object
