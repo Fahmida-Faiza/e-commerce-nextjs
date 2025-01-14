@@ -1,5 +1,5 @@
 import { connectDB } from "@/lib/connectDB";
-// import bcrypt from "bcrypt";
+import bcrypt from "bcrypt";
 export const POST = async (request) => {
   const newUser = await request.json();
   try {
@@ -10,11 +10,11 @@ export const POST = async (request) => {
       return Response.json({ message: "User Exists" }, { status: 304 });
     }
 
-    const resp = await userCollection.insertOne(newUser)
+    // const resp = await userCollection.insertOne(newUser)
 
     // secure password kortysi jeno keo hack na korey tai bcrypt use
-    // const hashedPassword = bcrypt.hashSync(newUser.password, 14);
-    // const resp = await userCollection.insertOne({...newUser, password: hashedPassword});
+    const hashedPassword = bcrypt.hashSync(newUser.password, 14);
+    const resp = await userCollection.insertOne({...newUser, password: hashedPassword});
 // ///////////////
 
 

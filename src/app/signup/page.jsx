@@ -15,7 +15,12 @@ const SignUpPage = () => {
             email: event.target.email.value,
             password: event.target.password.value
         }
-        console.log("signup", newUser);
+        console.log(newUser);
+
+
+
+
+         
         // api request korbo
         const resp = await fetch("http://localhost:3000/signup/api", {
             method: "POST",
