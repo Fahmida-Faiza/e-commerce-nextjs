@@ -4,23 +4,23 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-// import {signIn} from "next-auth/react"
+import {signIn} from "next-auth/react"
 import SocialSignin from '@/components/SocialSignin';
 
 
 
 const page = () => {
     // login
-    const handleLogin = async () => {
-    //     event.preventDefault();
-    //    const email= event.target.email.value;
-    //     const  password=  event.target.password.value;
-    //     const resp = await signIn('credentials' ,{
-    //         email, 
-    //         password,
-    //          redirect: false
-    //     })
-    //     console.log(resp)
+    const handleLogin = async (event) => {
+        event.preventDefault();
+       const email= event.target.email.value;
+        const  password=  event.target.password.value;
+        const resp = await signIn('credentials' ,{
+            email, 
+            password,
+             redirect: false
+        })
+        console.log(resp)
         
        
     }

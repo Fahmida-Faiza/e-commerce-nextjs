@@ -6,6 +6,7 @@ import React, { useEffect } from 'react';
 // animation
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { signOut, useSession } from 'next-auth/react';
 
 
 
@@ -13,6 +14,18 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 
 const Navbar = () => {
+
+
+
+    const session = useSession()
+    console.log(session)
+
+
+
+
+
+
+
     useEffect( ()=>{
         AOS.init();
     }
@@ -64,7 +77,19 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     <div>
-                        <Link href ="/login"><button className='btn btn-accent'>Login</button></Link>                    </div>
+                        {/* <Link href ="/login"><button className='btn btn-accent'>Login</button></Link>       */}
+
+
+                          {/* logout r kaj */}
+                         {!session.data ?
+                            <h1> <Link className='btn btn-accent' href={'/login'}>Login</Link></h1>
+                            :
+                            <button className=" btn btn-warning" onClick={() => signOut()}>LogOut</button>
+                        }
+
+
+                        
+                                      </div>
                 </div>
             </div>
         </div>
