@@ -1,7 +1,7 @@
 "use client"
 
 
-import SocialSignin from '@/components/SocialSignin';
+// import SocialSignin from '@/components/SocialSignin';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -66,10 +66,10 @@ const SignUpPage = () => {
                             <button className='mt-4 btn btn-primary'>SignIn</button>
 
                         </form>
-                            <div className='text-center'>
+                            {/* <div className='text-center'>
                                 <h6>or Sign in with</h6>
                                 <SocialSignin />
-                            </div>
+                            </div> */}
 
                         <h3 className=''>Already have an account <Link className='text-red-400 text-xl' href={'/login'}>Login</Link></h3>
                     </div>

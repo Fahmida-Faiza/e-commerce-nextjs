@@ -38,6 +38,10 @@ const handler = NextAuth({
         return currentUser;
       },
     }),
+
+
+
+    // google and github
     GoogleProvider({
       clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
       clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET,
@@ -48,6 +52,9 @@ const handler = NextAuth({
       clientSecret: process.env.GITHUB_SECRET,
     }),
   ],
+
+
+  // //////////
   // database e save kortysi google or github r acount gulo
   callbacks: {
     async signIn({ user, account }) {
