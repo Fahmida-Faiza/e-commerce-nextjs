@@ -8,6 +8,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { signOut, useSession } from 'next-auth/react';
 
+import { BsCartCheckFill } from "react-icons/bs";
 
 
 
@@ -75,8 +76,15 @@ const Navbar = () => {
                         {/* ............................................... */}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end  space-x-4">
+                <div>
+                                      <BsCartCheckFill />
+
+                                      </div>
                     <div>
+
+                    
+
                         {/* <Link href ="/login"><button className='btn btn-accent'>Login</button></Link>       */}
 
 
@@ -90,6 +98,9 @@ const Navbar = () => {
 
                         
                                       </div>
+
+
+                                      
                 </div>
             </div>
         </div>

@@ -6,6 +6,7 @@ export const getServices = async() =>{
 }
 
 
+
 // ////////details show
 export const getServicesDetails = async(id) =>{
     const res = await fetch(`http://localhost:3000/services/api/${id}`)
@@ -14,4 +15,4 @@ export const getServicesDetails = async(id) =>{
 }
 
 
-// ////////
+

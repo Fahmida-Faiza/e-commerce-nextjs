@@ -1,7 +1,7 @@
 export const services =[
   {
     "website": {
-      "products": [
+      "men": [
         {
           "id": 1,
           "name": "Adidas",
@@ -63,6 +63,8 @@ export const services =[
         },
 
       ],
+
+      
       "women":[
         {
           "id": 1,
@@ -117,7 +119,6 @@ export const services =[
 
         },
       ],
-
 
 
       "kids":[
