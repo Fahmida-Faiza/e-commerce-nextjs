@@ -9,6 +9,7 @@ import { services } from '@/lib/services';
 const Page = () => {
   // Access the `women` array from the `services` object
   const menData = services[0].website.men;
+  const category = "men";
 
   return (
     <div>
@@ -38,11 +39,10 @@ const Page = () => {
               </div>
 
               <div className="card-actions justify-center">
-                <Link href={`/booking/${data.id}`}>
-                  <button className="btn  text-white w-full  hover:btn-error  hover:text-white ">Shop Now</button>
+                <Link href={`/booking/${category}/${data.id}`}>
+                  <button className="btn text-white w-full hover:btn-error hover:text-white">Shop Now</button>
                 </Link>
 
-      
               </div>
             </div>
           </div>

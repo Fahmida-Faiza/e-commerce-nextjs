@@ -67,7 +67,7 @@ export const services =[
       
       "women":[
         {
-          "id": 1,
+          "id": 7,
           "name": "Adidas",
           "price": 2050.00,
           "size": [8, 9, 10, 11],
@@ -75,7 +75,7 @@ export const services =[
           "image": "https://i.ibb.co.com/sgMB2Zr/womensflat2.webp",
         },
         {
-          "id": 2,
+          "id": 8,
           "name": "Bata comfit",
           "price": 2000.00,
           "size": [6, 7, 8, 9],
@@ -83,7 +83,7 @@ export const services =[
           "image": "https://i.ibb.co.com/sgMB2Zr/womensflat2.webp",
         },
         {
-          "id": 3,
+          "id": 9,
           "name": "Adidas",
           "price": 3000.00,
           "size": [2, 3, 4, 5],
@@ -92,7 +92,7 @@ export const services =[
 
         },
         {
-          "id": 4,
+          "id": 10,
           "name": "Bata comfit",
           "price": 3000.00,
           "size": [2, 3, 4, 5],
@@ -101,7 +101,7 @@ export const services =[
 
         },
         {
-          "id": 5,
+          "id": 11,
           "name": "Adidas",
           "price": 3000.00,
           "size": [2, 3, 4, 5],
@@ -110,7 +110,7 @@ export const services =[
 
         },
         {
-          "id": 6,
+          "id": 12,
           "name": "Bata comfit",
           "price": 3000.00,
           "size": [2, 3, 4, 5],
@@ -123,7 +123,7 @@ export const services =[
 
       "kids":[
         {
-          "id": 1,
+          "id": 13,
           "name": "Adidas",
           "price": 2050.00,
           "size": [8, 9, 10, 11],
@@ -131,7 +131,7 @@ export const services =[
           "image": "https://i.ibb.co.com/zxhnkBG/kids1.webp",
         },
         {
-          "id": 2,
+          "id": 14,
           "name": "Bata comfit",
           "price": 2000.00,
           "size": [6, 7, 8, 9],
@@ -139,7 +139,7 @@ export const services =[
           "image": "https://i.ibb.co.com/zxhnkBG/kids1.webp",
         },
         {
-          "id": 3,
+          "id": 15,
           "name": "Adidas",
           "price": 3000.00,
           "size": [2, 3, 4, 5],
@@ -148,7 +148,7 @@ export const services =[
 
         },
         {
-          "id": 4,
+          "id": 16,
           "name": "Bata comfit",
           "price": 3000.00,
           "size": [2, 3, 4, 5],
@@ -157,7 +157,7 @@ export const services =[
 
         },
         {
-          "id": 5,
+          "id": 17,
           "name": "Adidas",
           "price": 3000.00,
           "size": [2, 3, 4, 5],
@@ -166,7 +166,7 @@ export const services =[
 
         },
         {
-          "id": 6,
+          "id": 18,
           "name": "Bata comfit",
           "price": 3000.00,
           "size": [2, 3, 4, 5],
@@ -177,8 +177,6 @@ export const services =[
       ]
 
 
-
-      
     }
   }
   

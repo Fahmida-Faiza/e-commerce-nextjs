@@ -8,10 +8,11 @@ import { services } from '@/lib/services';
 const Page = () => {
   // Access the `women` array from the `services` object
   const kidsData = services[0].website.kids;
+  const category = "kids";
 
   return (
     <div>
-      
+
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-black w-[90%] mx-auto'>
         {kidsData.map((data) => (
 
@@ -37,8 +38,8 @@ const Page = () => {
               </div>
 
               <div className="card-actions justify-center">
-                <Link href={`/booking`}>
-                  <button className="btn  text-white w-full  hover:btn-error  hover:text-white ">Shop Now</button>
+                <Link href={`/booking/${category}/${data.id}`}>
+                  <button className="btn text-white w-full hover:btn-error hover:text-white">Shop Now</button>
                 </Link>
               </div>
             </div>
