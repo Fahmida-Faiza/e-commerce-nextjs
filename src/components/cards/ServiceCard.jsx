@@ -32,10 +32,9 @@ function ServiceCard({ service }) {
                             </div>
 
                             <div className="card-actions justify-center">
-                                {/* <Link href={`/booking`}> */}
-                                {/* <Link href={`/checkout/${data.id}`}> */}
-                                    <button className="btn  text-white w-full  hover:btn-error  hover:text-white ">Shop Now</button>
-                                {/* </Link> */}
+                              
+                                    <Link  href={`/services/${_id}`}><button className="btn  text-white w-full  hover:btn-error  hover:text-white ">View Details</button></Link>
+                                
                             </div>
                         </div>
                     </div>

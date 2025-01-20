@@ -2,8 +2,20 @@
 import React from 'react'
 
 import ServiceCard from '../cards/ServiceCard'
-// import { services } from '@/lib/services'
-import { getServices } from '@/services/getServices'
+
+
+
+
+const getServices = async () =>{
+  const res = await fetch('http://localhost:3000/services/api/get-all')
+  const services = res.json()
+  return services;
+}
+
+
+
+
+
 const Services = async ()=> {
 
 
@@ -11,10 +23,8 @@ const Services = async ()=> {
 
   // load dataset
 const {services} = await getServices()
-// const data = await getServices()
-// console.log(data.services)
 
-  // console.log(services)
+
   return (
     <div>
       {
