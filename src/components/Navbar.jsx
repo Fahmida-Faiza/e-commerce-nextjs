@@ -78,7 +78,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end  space-x-4">
                 <div>
-                                  <Link href={`/carts`}>   <button className='btn btn-primary'> <BsCartCheckFill /></button></Link>
+                                  <Link href={`/my-bookings`}>   <button className='btn btn-primary'> <BsCartCheckFill /></button></Link>
 
                                       </div>
                     <div>

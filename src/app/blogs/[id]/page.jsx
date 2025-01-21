@@ -1,6 +1,7 @@
 import React from 'react'
-import getPost from '../../../../lib/getPost';
+// import getPost from '../../../../lib/getPost';
 import Image from 'next/image';
+import getPost from '@/lib/getPost';
 
 export default async function PostPage({ params }) {
   const { id } = params;
