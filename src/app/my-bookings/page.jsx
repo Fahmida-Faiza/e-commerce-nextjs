@@ -18,6 +18,31 @@ const Page = () => {
         setBooking(data?.myBookings);
 
     }
+
+
+
+
+
+    const handleDelete = async (id) => {
+        const deleted = await fetch(
+            `http://localhost:3000/my-bookings/api/delete/${id}`, {
+            method: "DELETE",
+        }
+        );
+        const resp = await deleted.json();
+        console.log(resp)
+        if (resp?.response?.deletedCount > 0) {
+          
+            loadData();
+        }
+    };
+
+
+
+
+
+
+
     useEffect(() => {
         loadData()
     }, [session])
@@ -29,7 +54,7 @@ const Page = () => {
     return (
         <div>
            
-               {bookings?.map(({ _id, name, price, size }) => (
+               {bookings?.map(({ _id, name, price, size , image }) => (
                   
 
 
@@ -43,7 +68,7 @@ const Page = () => {
                                   width={400}
                                   height={400}
                                   className="transition-transform duration-300 transform hover:scale-110"
-                                  src="/assets/women.png"
+                                  src={image}
                                   alt="Shoes"
                               />
                           </figure>
@@ -55,8 +80,8 @@ const Page = () => {
                               <h2 className=' text-black'>Price:{price}</h2>
                               <h3 className='text-black'> size: {size}</h3>
                               <div>
-                                  <button className="btn btn-warning mr-2">Update</button>
-                                  <button className="btn btn-error">Delete</button>
+                                  
+                                  <button onClick={() => handleDelete(_id)} className="btn btn-error">X</button>
                               </div>
                           </div>
                       </div>
