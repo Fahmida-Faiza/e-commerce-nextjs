@@ -7,9 +7,9 @@ import { useParams } from 'next/navigation';
 import React, { useState } from 'react';
 import { services } from '@/lib/services'; // Import your services array
 import { useSession } from 'next-auth/react';
-
+import { ToastContainer, toast } from 'react-toastify';
 function Booking() {
-
+ 
 const {data} =useSession()
 console.log(data)
 
@@ -61,6 +61,7 @@ headers:{
 
   return (
     <div className="max-w-[84rem]">
+       <ToastContainer />
       <div className="hero min-h-screen bg-white">
         <div className="hero-content flex-col lg:flex-row gap-10 justify-between text-black">
           <Image
@@ -136,6 +137,8 @@ headers:{
 
             <div className="pt-5">
               <button  onClick={handleAddToCart} className="btn btn-info w-full">Add to cart</button>
+            
+
             </div>
           </div>
         </div>
