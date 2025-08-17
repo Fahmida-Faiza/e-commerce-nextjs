@@ -72,12 +72,6 @@
 
 
 
-
-
-
-
-// design
-
 "use client";
 
 import Image from "next/image";
@@ -86,24 +80,16 @@ import React from "react";
 import { signIn } from "next-auth/react";
 
 const Page = () => {
-  // login
   const handleLogin = async (event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
-    const resp = await signIn("credentials", {
-      email,
-      password,
-      redirect: false,
-    });
-    console.log(resp);
+    await signIn("credentials", { email, password, redirect: false });
   };
 
   return (
-    <div className="p-20 flex items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 px-4">
       <div className="bg-white rounded-2xl shadow-2xl flex flex-col md:flex-row w-full max-w-5xl overflow-hidden">
-        
-        {/* Left Image Section */}
         <div className="hidden md:flex w-1/2 items-center justify-center bg-gray-100 p-6">
           <Image
             src="/assets/mens-casual.png"
@@ -114,56 +100,28 @@ const Page = () => {
           />
         </div>
 
-        {/* Right Form Section */}
         <div className="w-full md:w-1/2 p-10 flex flex-col justify-center">
           <h1 className="text-3xl font-bold text-gray-800 mb-6">Welcome Back 👋</h1>
           <p className="text-gray-600 mb-8">Please sign in to continue</p>
 
           <form onSubmit={handleLogin} className="space-y-6">
-            {/* Email */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                placeholder="your@email.com"
-                className="input input-bordered w-full mt-2 bg-white text-black placeholder-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400"
-                required
-              />
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" name="email" placeholder="your@email.com"
+                className="input input-bordered w-full mt-2 bg-white text-black rounded-xl focus:ring-2 focus:ring-pink-400" required />
             </div>
 
-            {/* Password */}
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                Password
-              </label>
-              <input
-                type="password"
-                name="password"
-                placeholder="Your password"
-                className="input input-bordered w-full mt-2 bg-white text-black placeholder-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400"
-                required
-              />
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+              <input type="password" name="password" placeholder="Your password"
+                className="input input-bordered w-full mt-2 bg-white text-black rounded-xl focus:ring-2 focus:ring-pink-400" required />
             </div>
 
-            {/* Submit Button */}
-            <button
-              type="submit"
-              className="btn w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-xl transition-all duration-300"
-            >
+            <button type="submit" className="btn w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-xl transition-all duration-300">
               Sign In
             </button>
           </form>
 
-          {/* Divider */}
-          {/* <div className="my-6 text-center text-gray-400">or</div>
-          <button className="btn w-full bg-gray-200 text-gray-800 rounded-xl hover:bg-gray-300">
-            Continue with Google
-          </button> */}
-
-          {/* Signup link */}
           <p className="text-center mt-6 text-gray-600">
             Don’t have an account?{" "}
             <Link href="/signup" className="text-pink-500 font-semibold hover:underline">

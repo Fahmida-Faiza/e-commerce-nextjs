@@ -84,8 +84,6 @@
 
 
 
-// design
-
 "use client";
 
 import Image from "next/image";
@@ -93,7 +91,6 @@ import Link from "next/link";
 import React from "react";
 
 const SignUpPage = () => {
-  // signup
   const handleSignUp = async (event) => {
     event.preventDefault();
     const newUser = {
@@ -101,32 +98,22 @@ const SignUpPage = () => {
       email: event.target.email.value,
       password: event.target.password.value,
     };
-    console.log(newUser);
 
-    // API request
     const resp = await fetch(
       "https://e-commerce-nextjs-three-kohl.vercel.app/signup/api",
       {
         method: "POST",
         body: JSON.stringify(newUser),
-        headers: {
-          "content-type": "application/json",
-        },
+        headers: { "content-type": "application/json" },
       }
     );
-    console.log(resp);
 
-    // reset form
-    if (resp.status === 200) {
-      event.target.reset();
-    }
+    if (resp.status === 200) event.target.reset();
   };
 
   return (
-    <div className="p-10 flex items-center justify-center bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 px-4">
       <div className="bg-white rounded-2xl shadow-2xl flex flex-col md:flex-row w-full max-w-5xl overflow-hidden">
-        
-        {/* Left Image Section */}
         <div className="hidden md:flex w-1/2 items-center justify-center bg-gray-100 p-6">
           <Image
             src="/assets/mens-casual.png"
@@ -137,85 +124,37 @@ const SignUpPage = () => {
           />
         </div>
 
-        {/* Right Form Section */}
         <div className="w-full md:w-1/2 p-10 flex flex-col justify-center">
-          <h1 className="text-3xl font-bold text-gray-800 mb-6">Create an Account 🚀</h1>
+          <h1 className="text-3xl font-bold text-gray-800 mb-6">Create Account 🚀</h1>
           <p className="text-gray-600 mb-8">Join us and explore amazing products</p>
 
           <form onSubmit={handleSignUp} className="space-y-6">
-            {/* Name */}
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                placeholder="Your full name"
-                className="input input-bordered w-full mt-2 bg-white text-black placeholder-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                required
-              />
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+              <input type="text" name="name" placeholder="Your name"
+                className="input input-bordered w-full mt-2 bg-white text-black rounded-xl focus:ring-2 focus:ring-indigo-400" required />
             </div>
 
-            {/* Email */}
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                placeholder="your@email.com"
-                className="input input-bordered w-full mt-2 bg-white text-black placeholder-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                required
-              />
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" name="email" placeholder="your@email.com"
+                className="input input-bordered w-full mt-2 bg-white text-black rounded-xl focus:ring-2 focus:ring-indigo-400" required />
             </div>
 
-            {/* Password */}
             <div>
-              <label
-                htmlFor="password"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Password
-              </label>
-              <input
-                type="password"
-                name="password"
-                placeholder="Create a strong password"
-                className="input input-bordered w-full mt-2 bg-white text-black placeholder-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                required
-              />
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+              <input type="password" name="password" placeholder="Create a password"
+                className="input input-bordered w-full mt-2 bg-white text-black rounded-xl focus:ring-2 focus:ring-indigo-400" required />
             </div>
 
-            {/* Submit Button */}
-            <button
-              type="submit"
-              className="btn w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-xl transition-all duration-300"
-            >
+            <button type="submit" className="btn w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-xl transition-all duration-300">
               Sign Up
             </button>
           </form>
 
-          {/* Divider */}
-          {/* <div className="my-6 text-center text-gray-400">or</div>
-          <button className="btn w-full bg-gray-200 text-gray-800 rounded-xl hover:bg-gray-300">
-            Continue with Google
-          </button> */}
-
-          {/* Login Link */}
           <p className="text-center mt-6 text-gray-600">
             Already have an account?{" "}
-            <Link
-              href="/login"
-              className="text-indigo-500 font-semibold hover:underline"
-            >
+            <Link href="/login" className="text-indigo-500 font-semibold hover:underline">
               Log In
             </Link>
           </p>
