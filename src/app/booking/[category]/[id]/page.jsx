@@ -43,7 +43,7 @@ console.log(data)
       color: selectedItem.color,
        
     }
- const resp = await fetch('http://localhost:3000/booking/api/new-booking',{
+ const resp = await fetch('https://e-commerce-nextjs-three-kohl.vercel.app/booking/api/new-booking',{
 method: 'POST',
 body: JSON.stringify(newBooking),
 headers:{

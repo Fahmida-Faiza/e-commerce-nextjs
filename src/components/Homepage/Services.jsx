@@ -7,7 +7,7 @@ import ServiceCard from '../cards/ServiceCard'
 
 
 const getServices = async () =>{
-  const res = await fetch('http://localhost:3000/services/api/get-all')
+  const res = await fetch('https://e-commerce-nextjs-three-kohl.vercel.app/services/api/get-all')
   const services = res.json()
   return services;
 }
