@@ -21,8 +21,9 @@ console.log(data)
   const categoryData = services[0].website[category]; // Access the correct category (men, women, kids)
   const selectedItem = categoryData?.find((item) => item.id === parseInt(id));
   const [selectedSize, setSelectedSize] = useState("");
-
-
+// quantity
+const [quantity, setQuantity] = useState(1);
+// 
   if (!selectedItem) {
     return <div>Loading...</div>; // Show loading or fallback UI
   }
@@ -35,6 +36,7 @@ console.log(data)
       productId: selectedItem.id,
       name: selectedItem.name,
       price: selectedItem.price,
+        quantity: quantity, // ✅ added
       image:selectedItem.image,
       // size: selectedItem.size, 
       // 
@@ -49,9 +51,10 @@ body: JSON.stringify(newBooking),
 headers:{
   "content-type" : "application/json"
 }
- })
+ });
+ toast.success("Item added to cart!");
  console.log(resp)
-  }
+  };
 
 
 
@@ -87,7 +90,14 @@ headers:{
               </span>
               <span className="text-red-500">Tk {selectedItem.price}</span>
             </div>
-            
+            {/* quantity */}
+                <div className="flex items-center gap-3">
+  <button onClick={() => setQuantity(q => Math.max(1, q - 1))} className="btn btn-xs">-</button>
+  <span>{quantity}</span>
+  <button onClick={() => setQuantity(q => q + 1)} className="btn btn-xs">+</button>
+</div>
+
+            {/*  */}
             <div className="text-red-500">
               * PLEASE CHECK THE PRODUCT INFRONT OF DELIVERY MAN<br />
               * Offer is only valid at batabd.com<br />
